@@ -4,18 +4,18 @@ import {
   type MessageActionRowComponent,
   type TopLevelComponent,
 } from 'discord.js';
-import { parseDiscordEmoji } from '../../utils/utils';
-import DiscordSelectMenu from './components/Select Menu';
-import DiscordContainer from './components/Container';
-import DiscordSection from './components/section/Section';
-import DiscordMediaGallery from './components/Media Gallery';
-import DiscordSeparator from './components/Spacing';
-import DiscordButton from './components/Button';
-import DiscordThumbnail from './components/Thumbnail';
-import MessageContent from './content';
-import { RenderType } from './content';
-import type { RenderMessageContext } from '..';
-import { ButtonStyleMapping } from './components/styles';
+import { parseDiscordEmoji } from '../../utils/utils.js';
+import DiscordSelectMenu from './components/Select Menu.js';
+import DiscordContainer from './components/Container.js';
+import DiscordSection from './components/section/Section.js';
+import DiscordMediaGallery from './components/Media Gallery.js';
+import DiscordSeparator from './components/Spacing.js';
+import DiscordButton from './components/Button.js';
+import DiscordThumbnail from './components/Thumbnail.js';
+import MessageContent from './content.js';
+import { RenderType } from './content.js';
+import type { RenderMessageContext } from '../index.js';
+import { ButtonStyleMapping } from './components/styles.js';
 
 export default function ComponentRow({
   component,

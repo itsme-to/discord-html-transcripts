@@ -1,8 +1,8 @@
 import React from 'react';
 import type { ButtonComponent, ThumbnailComponent } from 'discord.js';
-import { Component } from '../../components';
-import SectionContent from './SectionContent';
-import SectionAccessory from './SectionAccessory';
+import { Component } from '../../components.js';
+import SectionContent from './SectionContent.js';
+import SectionAccessory from './SectionAccessory.js';
 
 interface DiscordSectionProps {
   children: React.ReactNode;

@@ -1,12 +1,12 @@
-import parse, { type RuleTypesExtended } from 'discord-markdown-parser';
+import { parse, type RuleTypesExtended } from 'discord-markdown-parser';
 import { ChannelType, type APIMessageComponentEmoji } from 'discord.js';
 import React from 'react';
 import type { ASTNode } from 'simple-markdown';
 import { ASTNode as MessageASTNodes } from 'simple-markdown';
 import type { SingleASTNode } from 'simple-markdown';
-import type { RenderMessageContext } from '../';
-import { parseDiscordEmoji } from '../../utils/utils';
-import { DiscordHighlightedCode } from './components/DiscordHighlightedCode';
+import type { RenderMessageContext } from '../index.js';
+import { parseDiscordEmoji } from '../../utils/utils.js';
+import { DiscordHighlightedCode } from './components/DiscordHighlightedCode.js';
 
 export enum RenderType {
   EMBED,
@@ -44,7 +44,7 @@ export default async function MessageContent({ content, context }: { content: st
   );
   if (isOnlyEmojis) {
     // now check if there are less than or equal to 25 emojis
-    const emojis = parsed.filter((node) => ['emoji', 'twemoji'].includes(node.type));
+    const emojis = parsed.filter((node: { type: string; }) => ['emoji', 'twemoji'].includes(node.type));
     if (emojis.length <= 25) {
       context._internal = {
         largeEmojis: true,

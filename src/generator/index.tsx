@@ -1,17 +1,17 @@
 import { type Awaitable, type Channel, type Message, type Role, type User } from 'discord.js';
 import { prerenderToNodeStream } from 'react-dom/static';
-import { buildProfiles } from '../utils/buildProfiles';
-import { ggSansFont, revealSpoiler, scrollToMessage } from '../static/client';
+import { buildProfiles } from '../utils/buildProfiles.js';
+import { ggSansFont, revealSpoiler, scrollToMessage } from '../static/client.js';
 import { readFileSync } from 'fs';
 import path from 'path';
 import { render as renderLit } from '@lit-labs/ssr';
-import DiscordMessages from './transcript';
-import type { ResolveImageCallback } from '../downloader/images';
-import { streamToString } from '../utils/utils';
-import { collectResult } from '@lit-labs/ssr/lib/render-result';
-import { globalStyles } from './renderers/components/styles';
-import { DiscordAttachmentStyles } from './renderers/components/DiscordImage';
-import { DiscordHighlightStyles } from './renderers/components/DiscordHighlightedCode';
+import DiscordMessages from './transcript.js';
+import type { ResolveImageCallback } from '../downloader/images.js';
+import { streamToString } from '../utils/utils.js';
+import { collectResult } from '@lit-labs/ssr/lib/render-result.js';
+import { globalStyles } from './renderers/components/styles.js';
+import { DiscordAttachmentStyles } from './renderers/components/DiscordImage.js';
+import { DiscordHighlightStyles } from './renderers/components/DiscordHighlightedCode.js';
 
 // read the package.json file and get the @derockdev/discord-components-core version
 let discordComponentsVersion = '^4.0.2';

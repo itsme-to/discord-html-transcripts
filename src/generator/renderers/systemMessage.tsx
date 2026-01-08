@@ -1,6 +1,6 @@
 import { MessageType, type GuildMember, type Message, type User } from 'discord.js';
 import React from 'react';
-import { parseDiscordEmoji } from '../../utils/utils';
+import { parseDiscordEmoji } from '../../utils/utils.js';
 
 export default async function SystemMessage({ message }: { message: Message }) {
   switch (message.type) {

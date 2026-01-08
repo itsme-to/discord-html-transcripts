@@ -1,30 +1,20 @@
 {
   "compilerOptions": {
-    "target": "es2017",
+    "target": "ES2020",
+    "module": "NodeNext",
+    "moduleResolution": "NodeNext",
+
     "lib": ["dom", "dom.iterable", "esnext"],
     "strict": true,
     "forceConsistentCasingInFileNames": true,
     "esModuleInterop": true,
-    "module": "commonjs",
-    "noImplicitAny": true,
-    "strictNullChecks": true,
-    "noImplicitThis": true,
-    "alwaysStrict": true,
-    "noUnusedLocals": true,
+
     "outDir": "dist",
     "sourceMap": true,
-    "allowUnreachableCode": false,
-    "allowUnusedLabels": false,
-    "exactOptionalPropertyTypes": false,
-    "noImplicitOverride": true,
-    "noFallthroughCasesInSwitch": true,
-    "noUnusedParameters": true,
-    "pretty": true,
-    "moduleResolution": "node",
-    "jsx": "react-jsx",
-    "incremental": true,
     "declaration": true,
-    "skipLibCheck": true
+    "incremental": true,
+    "skipLibCheck": true,
+    "jsx": "react-jsx"
   },
   "include": ["src"],
   "exclude": ["node_modules"]

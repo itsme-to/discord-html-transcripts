@@ -1,6 +1,6 @@
 import { type MessageActionRowComponent, ComponentType } from 'discord.js';
-import { parseDiscordEmoji } from '../../../utils/utils';
-import { getSelectTypeLabel } from './utils';
+import { parseDiscordEmoji } from '../../../utils/utils.js';
+import { getSelectTypeLabel } from './utils.js';
 
 function DiscordSelectMenu({
   component,

@@ -1,5 +1,5 @@
 import { ComponentType } from 'discord.js';
-import { baseImageStyle, containerStyle } from './styles';
+import { baseImageStyle, containerStyle } from './styles.js';
 
 /**
  * Gets the appropriate label for different select menu types

@@ -1,5 +1,5 @@
 import type { AttachmentBuilder, Message } from 'discord.js';
-import type { RenderMessageContext } from './generator';
+import type { RenderMessageContext } from './generator/index.js';
 
 export enum AttachmentTypes {
   Audio,

@@ -1,7 +1,7 @@
 import type { Embed, Message } from 'discord.js';
-import type { RenderMessageContext } from '..';
-import { calculateInlineIndex } from '../../utils/embeds';
-import MessageContent, { RenderType } from './content';
+import type { RenderMessageContext } from '../index.js';
+import { calculateInlineIndex } from '../../utils/embeds.js';
+import MessageContent, { RenderType } from './content.js';
 
 type RenderEmbedContext = RenderMessageContext & {
   index: number;

@@ -1,5 +1,5 @@
 import type { MediaGalleryComponent } from 'discord.js';
-import { getGalleryLayout, getImageStyle } from './utils';
+import { getGalleryLayout, getImageStyle } from './utils.js';
 
 function DiscordMediaGallery({ component }: { component: MediaGalleryComponent }) {
   if (!component.items || component.items.length === 0) {

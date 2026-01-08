@@ -1,19 +1,18 @@
 /// <reference path="./discord-components.d.ts" />
 
 import { AttachmentBuilder, version, Collection, type Channel, type Message, type TextBasedChannel } from 'discord.js';
-import DiscordMessages from './generator';
+import DiscordMessages from './generator/index.js';
 import {
   ExportReturnType,
   type CreateTranscriptOptions,
   type GenerateFromMessagesOptions,
   type ObjectType,
-} from './types';
-import { TranscriptImageDownloader, type ResolveImageCallback } from './downloader/images';
+} from './types.js';
+import { TranscriptImageDownloader, type ResolveImageCallback } from './downloader/images.js';
 
 // re-exports
-export { default as DiscordMessages } from './generator/transcript';
-export { TranscriptImageDownloader } from './downloader/images';
-
+export { default as DiscordMessages } from './generator/transcript.js';
+export { TranscriptImageDownloader } from './downloader/images.js';
 // version check
 const versionPrefix = version.split('.')[0];
 
@@ -149,4 +148,4 @@ export default {
   createTranscript,
   generateFromMessages,
 };
-export * from './types';
+export * from './types.js';

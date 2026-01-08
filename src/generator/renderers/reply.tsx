@@ -1,6 +1,6 @@
 import { type Message, UserFlags } from 'discord.js';
-import type { RenderMessageContext } from '..';
-import MessageContent, { RenderType } from './content';
+import type { RenderMessageContext } from '../index.js';
+import MessageContent, { RenderType } from './content.js';
 
 export default async function MessageReply({ message, context }: { message: Message; context: RenderMessageContext }) {
   if (!message.reference) return null;

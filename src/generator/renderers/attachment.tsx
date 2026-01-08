@@ -1,8 +1,8 @@
 import { APIAttachment, APIMessage, Attachment as AttachmentType, Message } from 'discord.js';
-import type { RenderMessageContext } from '..';
-import { AttachmentTypes } from '../../types';
-import { formatBytes } from '../../utils/utils';
-import { DiscordImageAttachment } from './components/DiscordImage';
+import type { RenderMessageContext } from '../index.js';
+import { AttachmentTypes } from '../../types.js';
+import { formatBytes } from '../../utils/utils.js';
+import { DiscordImageAttachment } from './components/DiscordImage.js';
 
 /**
  * Renders all attachments for a message

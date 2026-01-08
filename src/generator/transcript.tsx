@@ -1,8 +1,8 @@
 import { ChannelType } from 'discord.js';
-import type { RenderMessageContext } from '.';
-import MessageContent, { RenderType } from './renderers/content';
-import DiscordMessage from './renderers/message';
-import { TranscriptHeader } from './renderers/components/TranscriptHeader';
+import type { RenderMessageContext } from './index.js';
+import MessageContent, { RenderType } from './renderers/content.js';
+import DiscordMessage from './renderers/message.js';
+import { TranscriptHeader } from './renderers/components/TranscriptHeader.js';
 
 /**
  * The core transcript component.

@@ -1,12 +1,12 @@
 import { type Message as MessageType } from 'discord.js';
-import type { RenderMessageContext } from '..';
-import { parseDiscordEmoji } from '../../utils/utils';
-import { Attachments } from './attachment';
-import ComponentRow from './components';
-import MessageContent, { RenderType } from './content';
-import { DiscordEmbed } from './embed';
-import MessageReply from './reply';
-import DiscordSystemMessage from './systemMessage';
+import type { RenderMessageContext } from '../index.js';
+import { parseDiscordEmoji } from '../../utils/utils.js';
+import { Attachments } from './attachment.js';
+import ComponentRow from './components.js';
+import MessageContent, { RenderType } from './content.js';
+import { DiscordEmbed } from './embed.js';
+import MessageReply from './reply.js';
+import DiscordSystemMessage from './systemMessage.js';
 
 export default async function DiscordMessage({
   message,
