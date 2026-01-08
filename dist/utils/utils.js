@@ -1,0 +1,41 @@
+import twemoji from 'twemoji';
+export function isDefined(value) {
+    return value !== undefined && value !== null;
+}
+/**
+ * Returns a tuple of [bytes (i.e. 1024), bytesUnit (i.e. KB)]
+ * @param bytes
+ * @param decimals
+ * @returns
+ */
+export function formatBytes(bytes, decimals = 2) {
+    if (bytes === 0)
+        return [0, 'Bytes'];
+    const k = 1024;
+    const dm = decimals < 0 ? 0 : decimals;
+    const sizes = ['Bytes', 'KB', 'MB', 'GB', 'TB', 'PB', 'EB', 'ZB', 'YB'];
+    const i = Math.floor(Math.log(bytes) / Math.log(k));
+    return [parseFloat((bytes / Math.pow(k, i)).toFixed(dm)), sizes[i]];
+}
+export function parseDiscordEmoji(emoji) {
+    if (emoji.id) {
+        return `https://cdn.discordapp.com/emojis/${emoji.id}.${emoji.animated ? 'gif' : 'png'}`;
+    }
+    const codepoints = twemoji.convert
+        .toCodePoint(emoji.name.indexOf(String.fromCharCode(0x200d)) < 0 ? emoji.name.replace(/\uFE0F/g, '') : emoji.name)
+        .toLowerCase();
+    return `https://cdnjs.cloudflare.com/ajax/libs/twemoji/14.0.2/svg/${codepoints}.svg`;
+}
+/**
+ * Converts a stream to a string
+ * @param stream - The stream to convert
+ */
+export function streamToString(stream) {
+    const chunks = [];
+    return new Promise((resolve, reject) => {
+        stream.on('data', (chunk) => chunks.push(chunk));
+        stream.on('error', reject);
+        stream.on('end', () => resolve(Buffer.concat(chunks).toString('utf8')));
+    });
+}
+//# sourceMappingURL=utils.js.map
